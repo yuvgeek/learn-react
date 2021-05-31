@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import SearchResult from "./SearchResult";
 
 // Functional Component
 // function App(props) {
@@ -35,11 +36,11 @@ function App(props) {
       <div className="search-results">
         {data.map((item) => {
           return (
-            <div>
-              <div className="search-url">{item.url}</div>
-              <h2 className="search-title">{item.title}</h2>
-              <div className="search-description">{item.description}</div>
-            </div>
+            <SearchResult
+              title={item.title}
+              url={item.url}
+              description={item.description}
+            ></SearchResult>
           );
         })}
       </div>
